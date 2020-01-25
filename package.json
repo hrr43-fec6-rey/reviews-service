@@ -29,6 +29,8 @@
     "css-loader": "^3.4.2",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "jabber": "^1.0.3",
+    "moment": "^2.24.0",
     "mongoose": "^5.8.9",
     "mongoose-faker": "^1.0.0",
     "nodemon": "^2.0.2",
