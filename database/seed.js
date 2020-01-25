@@ -35,11 +35,11 @@ const createReview = (resId) => {
 
 const createReviews = () => {
   // number of restaurants (will be 100)
-  const restaurantNum = 1;
+  const restaurantNum = 100;
   var reviewsArray = [];
   for(let i = 1; i <= restaurantNum; i++) {
-    // number of reviews per restaurant will be 30-50 , random here
-    var reviewCount = 2;
+    // number of reviews per restaurant will be 30-90 , random here
+    var reviewCount = Math.floor(Math.random() * (90 - 30)) + 30;
     for(let j = 0; j < reviewCount; j++) {
       reviewsArray.push(createReview(i));
     }
