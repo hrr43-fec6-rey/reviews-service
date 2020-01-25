@@ -1,13 +1,14 @@
 // database code
-var mongoose = require('mongoose');
-var reviewSchema = require('./schema.js');
-var mongoUri = 'mongodb://localhost/reviews';
+const mongoose = require('mongoose');
+const reviewSchema = require('./schema.js');
+
+const mongoUri = 'mongodb://localhost/reviews';
 mongoose.Promise = global.Promise;
 
-var db = mongoose.createConnection(mongoUri, {
+const db = mongoose.createConnection(mongoUri, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
+  useUnifiedTopology: true,
 });
-var Review = db.model('Review',reviewSchema);
+const Review = db.model('Review', reviewSchema);
 
 module.exports = Review;

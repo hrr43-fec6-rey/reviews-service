@@ -1,6 +1,6 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var reviewSchema= mongoose.Schema ({
+const reviewSchema = mongoose.Schema({
   restaurantId: Number,
   firstName: String,
   lastName: String,
@@ -15,7 +15,7 @@ var reviewSchema= mongoose.Schema ({
   recommend: Boolean,
   comments: String,
   filterTag: String,
-  vip: Boolean
+  vip: Boolean,
 });
 
 module.exports = reviewSchema;
