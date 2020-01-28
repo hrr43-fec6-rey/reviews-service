@@ -12,9 +12,7 @@ const App = () => {
     const id = urlParams.get('id');
     axios.get(`/${id}`)
       .then((result) => {
-        console.log('data from DB ', result.data);
         setReviews(result.data);
-        console.log('data in state ', reviews);
       })
       .catch((err) => console.log('error ', err));
   }, []);
@@ -24,5 +22,4 @@ const App = () => {
   );
 };
 
-// const App = () => <div>testing React!</div>;
 export default App;

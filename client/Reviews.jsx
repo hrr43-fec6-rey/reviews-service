@@ -44,5 +44,5 @@ const Reviews = ({ reviews }) => {
     );
   });
   return <div>{list}</div>;
-}
+};
 export default Reviews;
