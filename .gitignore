@@ -1,4 +1,8 @@
 *.log
 node_modules
-client/bundle.js
-.eslintrc.js
+public/bundle.js
+.eslintrc.json
+.eslintignore
+.babelrc
+oldeslintrc.js
+reactHooksSample.jsx

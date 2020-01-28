@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './App.jsx';
 
-const Test = () => <div>testing React!</div>;
-
-ReactDOM.render(<Test />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById('app'));
