@@ -4,7 +4,7 @@ const moment = require('moment');
 const Reviews = ({ reviews }) => {
   const list = reviews.map((review) => {
     return (
-      <div>
+      <div key={ review._id }>
         <div>
           {review.vip ? 'VIP' : ''}
           {' '}

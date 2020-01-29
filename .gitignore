@@ -6,3 +6,5 @@ public/bundle.js
 .babelrc
 oldeslintrc.js
 reactHooksSample.jsx
+__snapshots__
+jest.*
