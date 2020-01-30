@@ -11,6 +11,12 @@ app.listen(PORT, () => {
   console.log('Listening on port ', PORT);
 });
 
+app.get('/favicon.ico', (req, res) => {
+  console.log('FAVICON LOOKUP');
+  res.status(200).end();
+});
+
+// app.get('/:restaurantId', (req, res) => {
 app.get('/:restaurantId', (req, res) => {
   Review.find(req.params)
     .then((data) => {

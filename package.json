@@ -4,7 +4,7 @@
   "description": "FEC project",
   "main": "index.js",
   "scripts": {
-    "test": "jest --notify --detectOpenHandles",
+    "test": "jest --notify --detectOpenHandles --coverage",
     "build": "webpack -w",
     "start": "nodemon server/index.js -i client",
     "seedDB": "node database/seed.js"
@@ -51,6 +51,7 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-react": "^7.18.0",
     "eslint-plugin-react-hooks": "^1.7.0",
+    "file-loader": "^5.0.2",
     "jest": "^25.1.0",
     "react-test-renderer": "^16.12.0"
   }
