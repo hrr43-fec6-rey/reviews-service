@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 // import React from 'react';
 import axios from 'axios';
 import Reviews from './Reviews.jsx';
+import './App.css';
 
 const App = () => {
   const [reviews, setReviews] = useState([]);

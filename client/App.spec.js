@@ -5,9 +5,10 @@ import App from './App.jsx';
 import Reviews from './Reviews.jsx';
 
 describe('App', () => {
-  test('snapshots', () => {
-    const component = renderer.create(<App />);
-    const tree = component.toJSON();
+  test('App renders correctly with a snapshot', () => {
+    const tree = renderer
+      .create(<App />)
+      .toJSON();
     expect(tree).toMatchSnapshot();
   });
 
