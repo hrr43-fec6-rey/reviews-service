@@ -2,6 +2,7 @@ const path = require('path');
 
 module.exports = {
   mode: 'development',
+  target: 'node',
   entry: './client/index.jsx',
   output: {
     path: path.resolve(__dirname, 'public'),
@@ -23,6 +24,16 @@ module.exports = {
       {
         test: /\.m?css?$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: ['file-loader'],
+      },
+      {
+        test: /\.(png|svg|jpg|gif)$/,
+        use: [
+          'file-loader',
+        ],
       },
     ],
   },
