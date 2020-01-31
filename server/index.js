@@ -17,7 +17,7 @@ app.get('/favicon.ico', (req, res) => {
 });
 
 // app.get('/:restaurantId', (req, res) => {
-app.get('/:restaurantId', (req, res) => {
+app.get('/:restaurantId/', (req, res) => {
   Review.find(req.params).sort('-dineDate')
     .then((data) => {
       res.status(200).send(data);
@@ -25,4 +25,25 @@ app.get('/:restaurantId', (req, res) => {
     .catch((err) => {
       console.log('error getting data from database ', err);
     });
+});
+
+app.get('/sort/:id/:sorting/', (req, res) => {
+  console.log('SORT PARAMS ', req.params);
+  const sortField = (req.params.sorting === 'Highest') ? 'overall' : '-overall';
+  console.log('SORT FIELD ',sortField);
+  Review.find(req.params.id).sort('-overall')
+    .then((data) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      console.log('error getting data from database ', err);
+    });
+
+  // Review.find(req.params).sort('-dineDate')
+  //   .then((data) => {
+  //     res.status(200).send(data);
+  //   })
+  //   .catch((err) => {
+  //     console.log('error getting data from database ', err);
+  //   });
 });
