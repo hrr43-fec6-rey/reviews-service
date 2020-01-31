@@ -1,8 +1,8 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 import { mount } from 'enzyme';
-import App from './App.jsx';
-import Reviews from './Reviews.jsx';
+import App from '../client/App.jsx';
+import Reviews from '../client/Reviews.jsx';
 
 describe('App', () => {
   test('App renders correctly with a snapshot', () => {
