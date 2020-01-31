@@ -4,10 +4,11 @@
   "description": "FEC project",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server/index.js -i client",
     "test": "jest --notify --detectOpenHandles --coverage",
     "build": "webpack -w",
-    "start": "nodemon server/index.js -i client",
-    "seedDB": "node database/seed.js"
+    "seedDB": "node database/seed.js",
+    "mongo": "sudo service mongod start"
   },
   "repository": {
     "type": "git",

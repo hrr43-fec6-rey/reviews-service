@@ -18,7 +18,7 @@ app.get('/favicon.ico', (req, res) => {
 
 // app.get('/:restaurantId', (req, res) => {
 app.get('/:restaurantId', (req, res) => {
-  Review.find(req.params)
+  Review.find(req.params).sort('-dineDate')
     .then((data) => {
       res.status(200).send(data);
     })

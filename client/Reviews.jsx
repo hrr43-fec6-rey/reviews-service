@@ -11,7 +11,8 @@ const Reviews = ({ reviews }) => {
           <div className="user-box">
             <div className="user-circle">
               <div className="user-initials">
-                {review.firstName[0]}{review.lastName[0]}
+                {review.firstName[0]}
+                {review.lastName[0]}
               </div>
             </div>
           </div>
@@ -45,25 +46,24 @@ const Reviews = ({ reviews }) => {
                 • Dined {moment(review.dineDate).fromNow()}
               </span>
             </div>
-              <div className="review-ratings">
-                Overall
-                {' '}
-                <span className="review-numbers">{review.overall}
-                </span>
-                {' '}
-                • Food
-                {' '}
-                <span className="review-numbers">{review.food}</span>
-                {' '}
-                • Service
-                {' '}
-                <span className="review-numbers">{review.service}</span>
-                {' '}
-                • Ambience
-                {' '}
-                <span className="review-numbers">{review.ambience}</span>
-
-              </div>
+            <div className="review-ratings">
+              Overall
+              {' '}
+              <span className="review-numbers">{review.overall}
+              </span>
+              {' '}
+              • Food
+              {' '}
+              <span className="review-numbers">{review.food}</span>
+              {' '}
+              • Service
+              {' '}
+              <span className="review-numbers">{review.service}</span>
+              {' '}
+              • Ambience
+              {' '}
+              <span className="review-numbers">{review.ambience}</span>
+            </div>
           </div>
           <div className="review-comments">
             {review.comments}

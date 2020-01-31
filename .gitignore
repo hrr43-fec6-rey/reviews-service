@@ -1,12 +1,12 @@
 *.log
 node_modules
 public/*.js
+public/*.png
+public/*.otf
 .eslintrc.json
 .eslintignore
 .babelrc
 oldeslintrc.js
 reactHooksSample.jsx
-__snapshots__
-jest.*
-package-lock.json
 coverage
+__snapshot__
