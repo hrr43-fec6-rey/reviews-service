@@ -9,3 +9,4 @@ public/*.otf
 oldeslintrc.js
 reactHooksSample.jsx
 coverage
+__snapshot__
