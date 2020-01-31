@@ -8,5 +8,4 @@ public/*.otf
 .babelrc
 oldeslintrc.js
 reactHooksSample.jsx
-jest.*
 coverage
