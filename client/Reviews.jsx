@@ -3,21 +3,24 @@ import msgIcon from './message-icon.png';
 
 const moment = require('moment');
 
+const date = new Date;
+const checkDate = date.setDate(date.getDate() - 30);
+
 const Reviews = ({ reviews }) => {
   const list = reviews.map((review) => (
     <div key={review._id} className="review">
       <div className="review-user">
         <div className="user-box">
-          <div className="user-circle">
+          <div className="user-circle" style={{ background: review.color }}>
             <div className="user-initials">
-              {review.firstName[0]}
-              {review.lastName[0]}
+              {review.firstName ? review.firstName[0] : 'O'}
+              {review.firstName ? review.lastName[0] : 'T'}
             </div>
           </div>
         </div>
         <div className="user-name">
-          {review.firstName}
-          {review.lastName.substring(0, 1)}
+          {review.firstName ? review.firstName : 'OpenTable'}
+          {review.firstName ? review.lastName.substring(0, 1) : '\nDiner'}
           {review.vip ? <span className="user-vip">VIP</span> : ''}
         </div>
         <div className="user-city">
@@ -27,7 +30,7 @@ const Reviews = ({ reviews }) => {
           <img className="msg-icon" src={msgIcon} alt="icon" />
           {review.numReviews}
           {' '}
-          reviews
+          {review.numReviews > 1 ? 'reviews' : 'review'}
         </div>
       </div>
       <div className="review-details">
@@ -44,7 +47,7 @@ const Reviews = ({ reviews }) => {
             <span className="review-date">
               • Dined
               {' '}
-              {moment(review.dineDate).fromNow()}
+              {((moment(checkDate).format('YYYY-MM-DD')) > (moment(review.dineDate).format('YYYY-MM-DD'))) ? moment(review.dineDate).format('LL') : moment(review.dineDate).fromNow() }
             </span>
           </div>
           <div className="review-ratings">

@@ -16,6 +16,7 @@ const reviewSchema = mongoose.Schema({
   comments: String,
   filterTag: String,
   vip: Boolean,
+  color: String,
 });
 
 module.exports = reviewSchema;
