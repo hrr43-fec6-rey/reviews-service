@@ -9,13 +9,19 @@ const buzzWords = ['great food', 'eat', 'service', 'drinks', 'loved', 'never aga
 
 const tags = ['Good for groups', 'Desserts', 'Appetizers', 'Drinks', 'Kid friendly'];
 
+const circleColors = ['#6c8ae4', '#d86441', '#bb6acd', '#df4e96'];
+
 const jabber = new Jabber(buzzWords, 2);
 
 const createReview = (resId) => {
   const review = {};
   review.restaurantId = resId;
-  review.firstName = faker.name.firstName();
-  review.lastName = faker.name.lastName();
+  review.firstName = (Math.random() < 0.7) ? faker.name.firstName() : '';
+  if (review.firstName.length) {
+    review.lastName = (Math.random() < 0.7) ? faker.name.lastName() : '';
+  } else {
+    review.lastName = '';
+  }
   review.city = faker.address.city();
   review.numReviews = Math.floor(Math.random() * (25 - 1)) + 1;
   review.overall = Math.floor(Math.random() * (5 - 1)) + 1;
@@ -29,7 +35,7 @@ const createReview = (resId) => {
   review.comments = jabber.createParagraph(Math.floor(Math.random() * (50 - 10)) + 10);
   review.filterTag = tags[Math.floor(Math.random() * tags.length)];
   review.vip = Math.random() < 0.3;
-
+  review.color = circleColors[Math.floor(Math.random() * circleColors.length)];
   return review;
 };
 
