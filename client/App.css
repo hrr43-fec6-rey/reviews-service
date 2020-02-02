@@ -167,6 +167,7 @@ body {
   border: 1px solid #d8d9db;
   cursor: pointer;
   box-sizing: border-box;
+  min-width: 160px;
 }
 
 .dropbtn:hover {

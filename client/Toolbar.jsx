@@ -24,7 +24,7 @@ const Toolbar = ({ sortReviews }) => {
   return (
     <div>
       <div className="dropdown">
-        <div className="dropbtn" role="button">Sort by</div>
+        <div className="dropbtn" role="button">{ rating || 'Sort by' }</div>
         <div className="dropdown-content">
           <div className="drop">
             <span className="select-drop">
