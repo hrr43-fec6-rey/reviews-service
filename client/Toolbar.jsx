@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
-const Toolbar = ({ sort, sortReviews }) => {
+const Toolbar = ({ sortReviews }) => {
   const [rating, setRating] = useState('');
   const [filters, setFilters] = useState([]);
 
@@ -28,16 +28,16 @@ const Toolbar = ({ sort, sortReviews }) => {
         <div className="dropdown-content">
           <div className="drop">
             <span className="select-drop">
-              <input type="radio" value="Newest" checked={rating === 'Newest'} onChange={(e) => handleSelection(e)} />
-              <span className="tool-txt">Newest</span>
+              <input className="radio" type="radio" value="Newest" id="radio-1" checked={rating === 'Newest'} onChange={(e) => handleSelection(e)} />
+              <label className="tool-txt" htmlFor="radio-1">Newest</label>
             </span>
             <span className="select-drop">
-              <input type="radio" value="Highest" checked={rating === 'Highest'} onChange={(e) => handleSelection(e)} />
-              <span className="tool-txt">Highest rating</span>
+              <input className="radio" type="radio" value="Highest" id="radio-2" checked={rating === 'Highest'} onChange={(e) => handleSelection(e)} />
+              <label className="tool-txt" htmlFor="radio-2">Highest rating</label>
             </span>
             <span className="select-drop">
-              <input type="radio" value="Lowest" checked={rating === 'Lowest'} onChange={(e) => handleSelection(e)} />
-              <span className="tool-txt">Lowest rating</span>
+              <input className="radio" type="radio" value="Lowest" id="radio-3" checked={rating === 'Lowest'} onChange={(e) => handleSelection(e)} />
+              <label className="tool-txt" htmlFor="radio-3">Lowest rating</label>
             </span>
 
           </div>
@@ -47,36 +47,65 @@ const Toolbar = ({ sort, sortReviews }) => {
       <div className="filter-header">Filters</div>
       <div className="boxes">
         <div className="filter-name">
-          <input type="checkbox" id="checkbox-1" className="regular-checkbox"  value="Good for groups" onChange={(e) => handleCheck(e)} />
-          <label htmlFor="checkbox-1"></label>
-          <span className="tag" htmlFor="checkbox-1"> Good for groups</span>
+          <input
+            type="checkbox"
+            id="checkbox-1"
+            className="regular-checkbox"
+            value="Good for groups"
+            onChange={(e) => handleCheck(e)}
+          />
+          <label htmlFor="checkbox-1" />
+          <label className="tag" htmlFor="checkbox-1"> Good for groups</label>
         </div>
         <div className="filter-name">
-          <input type="checkbox" id="checkbox-2" className="regular-checkbox"  value="Appetizers" onChange={(e) => handleCheck(e)} />
+          <input
+            type="checkbox"
+            id="checkbox-2"
+            className="regular-checkbox"
+            value="Appetizers"
+            onChange={(e) => handleCheck(e)}
+          />
           <label htmlFor="checkbox-2" />
-          <span className="tag"> Appetizers</span>
+          <label className="tag" htmlFor="checkbox-2"> Appetizers</label>
         </div>
         <div className="filter-name">
-          <input type="checkbox" id="checkbox-3" className="regular-checkbox"  value="Drinks" onChange={(e) => handleCheck(e)} />
+          <input
+            type="checkbox"
+            id="checkbox-3"
+            className="regular-checkbox"
+            value="Drinks"
+            onChange={(e) => handleCheck(e)}
+          />
           <label htmlFor="checkbox-3" />
-          <span className="tag"> Drinks</span>
+          <label className="tag" htmlFor="checkbox-3"> Drinks</label>
         </div>
       </div>
       <div className="boxes">
         <div className="filter-name">
-          <input type="checkbox" id="checkbox-4" className="regular-checkbox"  value="Desserts" onChange={(e) => handleCheck(e)} />
+          <input
+            type="checkbox"
+            id="checkbox-4"
+            className="regular-checkbox"
+            value="Desserts"
+            onChange={(e) => handleCheck(e)}
+          />
           <label htmlFor="checkbox-4" />
-          <span className="tag"> Desserts</span>
+          <label className="tag" htmlFor="checkbox-4"> Desserts</label>
         </div>
         <div className="filter-name">
-          <input type="checkbox" id="checkbox-5" className="regular-checkbox"  value="Kid friendly" onChange={(e) => handleCheck(e)} />
+          <input
+            type="checkbox"
+            id="checkbox-5"
+            className="regular-checkbox"
+            value="Kid friendly"
+            onChange={(e) => handleCheck(e)}
+          />
           <label htmlFor="checkbox-5" />
-          <span className="tag"> Kid friendly</span>
+          <label className="tag" htmlFor="checkbox-5"> Kid friendly</label>
         </div>
       </div>
     </div>
   );
 };
-
 
 export default Toolbar;

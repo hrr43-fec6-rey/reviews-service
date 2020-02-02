@@ -1,5 +1,8 @@
 {
   "testRegex": "((\\.|/*.)(spec))\\.js?$",
+  "setupFilesAfterEnv": [
+    "<rootDir>/jest.setup.js"
+  ],
   "modulePaths": [
     "__mocks__"
   ],
@@ -10,8 +13,5 @@
   "testPathIgnorePatterns": [
     "/node_modules/",
     "/public/"
-  ],
-  "setupFilesAfterEnv": [
-    "<rootDir>/jest.setup.js"
   ]
 }

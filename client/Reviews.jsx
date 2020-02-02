@@ -3,7 +3,7 @@ import msgIcon from './message-icon.png';
 
 const moment = require('moment');
 
-const date = new Date;
+const date = new Date();
 const checkDate = date.setDate(date.getDate() - 30);
 
 const Reviews = ({ reviews }) => {
