@@ -20,35 +20,6 @@ const App = () => {
       .catch((err) => console.log('error ', err));
   }, []);
 
-  // const sortReviews = (sort) => {
-  //   if (sort === 'Newest') {
-  //     axios.get(`/${id}`)
-  //       .then((result) => {
-  //         setReviews(result.data);
-  //       })
-  //       .catch((err) => console.log('error ', err));
-  //   } else {
-  //     axios.get(`/sort/${id}/${sort}`)
-  //       .then((result) => {
-  //         setReviews(result.data);
-  //       })
-  //       .catch((err) => console.log('error ', err));
-  //   }
-  // };
-
-  // const filterReviews = (sort, list) => {
-  //   console.log('FILTER LIST ', list);
-  //   if (!list.length) {
-  //     sortReviews('Newest');
-  //   } else {
-  //     axios.get(`/filter/${id}/${JSON.stringify(list)}`)
-  //       .then((result) => {
-  //         setReviews(result.data);
-  //       })
-  //       .catch((err) => console.log('error ', err));
-  //   }
-  // };
-
   const sortReviews = (sort, list) => {
     if ((!sort || sort === 'Newest') && !list.length) {
       axios.get(`/${id}`)
@@ -57,8 +28,7 @@ const App = () => {
         })
         .catch((err) => console.log('error ', err));
     } else {
-      if (!sort) { sort = 0; }
-      axios.get(`/sort/${id}/${sort}/${JSON.stringify(list)}`)
+      axios.get(`/sort/${id}/${sort || 0}/${JSON.stringify(list)}`)
         .then((result) => {
           setReviews(result.data);
         })
@@ -67,7 +37,6 @@ const App = () => {
   };
   return (
     <div>
-      {/* <Toolbar sortReviews={sortReviews} filterReviews={filterReviews} /> */}
       <Toolbar sortReviews={sortReviews} />
       <Reviews reviews={reviews} />
     </div>

@@ -5,8 +5,7 @@ public/*.png
 public/*.otf
 .eslintrc.json
 .eslintignore
-.babelrc
 oldeslintrc.js
 reactHooksSample.jsx
 coverage
-__snapshot__
+spec/__snapshot__

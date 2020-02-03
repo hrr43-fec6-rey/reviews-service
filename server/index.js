@@ -52,7 +52,7 @@ app.get('/sort/:id/:sorting/:list/', (req, res) => {
         console.log('error getting data from database ', err);
       });
   } else {
-    Review.find({restaurantId: req.params.id, filterTag: { $in: list } }).sort(sortField).sort('-dineDate')
+    Review.find({ restaurantId: req.params.id, filterTag: { $in: list } }).sort(sortField).sort('-dineDate')
       .then((data) => {
         res.status(200).send(data);
       })
