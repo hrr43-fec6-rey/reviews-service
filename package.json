@@ -4,9 +4,11 @@
   "description": "FEC project",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon server/index.js -i client",
-    "test": "jest --notify --detectOpenHandles --coverage --config ./jest.config.json",
-    "build": "webpack -w",
+    "start": "node ./server/index.js",
+    "start:dev": "nodemon server/index.js -i client",
+    "test": "jest --notify --detectOpenHandles --coverage --config ./jest.config.json --updateSnapshot",
+    "build": "webpack",
+    "build:dev": "webpack -w",
     "seedDB": "node database/seed.js",
     "mongo": "sudo service mongod start"
   },
