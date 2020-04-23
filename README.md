@@ -51,31 +51,31 @@ client can browse to lococalhost:3300
 ## Folder Structure
 
 ### Server
-server/index.js (node/express server)
+* server/index.js (node/express server)
 
 ### Client
-App.css (styling)
-App.jsx (main React component with hooks including GET reviews section)
-index.jsx (ReactDOM render component)
-Reviews.jsx (React component for displaying reviews)
-Toolbar.jsx (React component for filtering toolbar of reviews)
+* App.css (styling)
+* App.jsx (main React component with hooks including GET reviews section)
+* index.jsx (ReactDOM render component)
+* Reviews.jsx (React component for displaying reviews)
+* Toolbar.jsx (React component for filtering toolbar of reviews)
 
 ### Public
-index.html
-bundle.js (webpack bundle , production or development)
+* index.html
+* bundle.js (webpack bundle , production or development)
 
 ### Spec
 (location for testcases)
-App.spec.js
-seedFunction.spec.js
+* App.spec.js
+* seedFunction.spec.js
 
 ## Configuration files
-.babelrc
-.gitignore
-babel.config.js
-jest.config.json
-jest.setup.js
-package.json
-webpack.config.js
+* .babelrc
+* .gitignore
+* babel.config.js
+* jest.config.json
+* jest.setup.js
+* package.json
+* webpack.config.js
 
 
