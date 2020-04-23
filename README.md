@@ -1,12 +1,12 @@
 # Reviews Module for FEC project
 
 ## To initialize repo
-*npm install
+* npm install
 
 ## options
 
 ### to start server
-*npm start (runs node server)
+* npm start (runs node server)
 npm run start:dev (runs nodemon for watching)
 
 server will run on port 3300
