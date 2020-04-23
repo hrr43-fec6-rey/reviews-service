@@ -3,7 +3,7 @@
 ## To initialize repo
 * npm install
 
-## options
+## Options
 
 ### to start server
 * npm start (runs node server)
