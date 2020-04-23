@@ -55,14 +55,13 @@ server/index.js (node/express server)
 
 ### Client
 App.css (styling)
-
 App.jsx (main React component with hooks including GET reviews section)
 index.jsx (ReactDOM render component)
 Reviews.jsx (React component for displaying reviews)
 Toolbar.jsx (React component for filtering toolbar of reviews)
 
 ### Public
-index.html 
+index.html
 bundle.js (webpack bundle , production or development)
 
 ### Spec
