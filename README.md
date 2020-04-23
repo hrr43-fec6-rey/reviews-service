@@ -7,25 +7,26 @@
 
 ### to start server
 * npm start (runs node server)
-npm run start:dev (runs nodemon for watching)
+* npm run start:dev (runs nodemon for watching)
 
 server will run on port 3300
+
 client can browse to lococalhost:3300
 
 ### testing
-npm run test (runs jest on test cases)
+* npm run test (runs jest on test cases)
 
 ### webkack builds
-npm run build 
-npm run build:dev (watch mode for development)
+* npm run build 
+* npm run build:dev (watch mode for development)
 
 ### database
-npm run seedDB (seeds mongo database with dummy data)
-npm run mongo (start the mongodb server)
+* npm run seedDB (seeds mongo database with dummy data)
+* npm run mongo (start the mongodb server)
 
 ## API Routes
-GET /:restaurantId
-GET /sort/:id/:sorting/:list
+* GET /:restaurantId
+* GET /sort/:id/:sorting/:list
 
 ## MongoDB reviewSchema
 {
@@ -54,6 +55,7 @@ server/index.js (node/express server)
 
 ### Client
 App.css (styling)
+
 App.jsx (main React component with hooks including GET reviews section)
 index.jsx (ReactDOM render component)
 Reviews.jsx (React component for displaying reviews)
