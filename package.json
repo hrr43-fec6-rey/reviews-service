@@ -32,7 +32,7 @@
     "babel-loader": "^8.0.6",
     "cors": "^2.8.5",
     "css-loader": "^3.4.2",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "faker": "^4.1.0",
     "jabber": "^1.0.3",
     "moment": "^2.24.0",
